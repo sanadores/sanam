@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Tomato_Grotesk';
+    src: url('/fonts/Tomato_Grotesk/TomatoGrotesk-Regular.otf') ;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Tomato_Grotesk';
+    src: url('/fonts/Tomato_Grotesk/TomatoGrotesk-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  html {
+    font-family: 'Tomato_Grotesk', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .writing-mode-vertical-rl {
+    writing-mode: vertical-rl;
+  }
+}
+
+/* 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+
+
+
+
+.navbar-area {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 20;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 300ms;
+}
+
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.scroll-top {
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+}
+
+/* Cambiar el color de fondo al pasar el mouse */
+.scroll-top:hover {
+  background-color: darkgreen;
+}
+
+/* Cambiar el color de fondo cuando está activo */
+.scroll-top:active {
+  background-color: forestgreen;
+}
+
+/* Agregar un efecto de aceleración al subir */
+.scroll-top.active {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ocultar el botón cuando está en la parte superior de la página */
+.scroll-top.hidden {
+  opacity: 0;
+}
+
+
+.sanam-gray {
+  color: #6B6B6B;
+}
+
+.sanam-green {
+  color: #04AF30;
+}
+
+.section-img {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* width: 1800px; */
+  /* height: 900px; */
+}
+
+.section-img img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: .5s ease;
+}
+
+.section-img img:hover {
+  cursor: crosshair;
+  width: 1080px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.vertical-txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  /* Rotar el texto si es necesario */
+  padding: 10px;
+  /* Espacio alrededor del texto */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semitransparente para el texto */
+  color: white;
+  /* Color del texto */
+}
+
+/* Tooltip icon whatsapp */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(7, 41, 2);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  /* Posiciona el tooltip en el centro vertical del contenedor */
+  right: 125%;
+  /* Posiciona el tooltip a la izquierda del contenedor */
+  margin-top: -15px;
+  /* Ajusta la posición vertical para centrar el tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+

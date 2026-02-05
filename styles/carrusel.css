@@ -1,0 +1,9 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6C7F7D; /* Cambia este valor al color que desees */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* Ajusta el tamaño de las flechas si es necesario */
+}
