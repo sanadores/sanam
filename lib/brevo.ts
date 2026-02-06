@@ -23,7 +23,7 @@ const smtpEmail = new brevo.SendSmtpEmail();
 export async function sendEmail({ subject, htmlContent }: Params) {
   //A quien se envia el correo
   smtpEmail.subject = "Solicitud de información: " + subject; //Asunto del correo
-  smtpEmail.to = [{ email: "ventas@sanam.co" }];
+  smtpEmail.to = [{ email: "ventas@sanadoresambientales.com" }];
   //Cuerpo del correo
   const htmlBody = htmlContent
     .map(
@@ -42,7 +42,7 @@ export async function sendEmail({ subject, htmlContent }: Params) {
   // Quien envia el correo
   smtpEmail.sender = {
     // name: "Correo enviado desde la página web",
-    email: "ventas@sanam.co",
+    email: "ventas@sanadoresambientales.com",
   };
 
   //const responde = await brevoInstance.sendTransacEmail(smtpEmail);

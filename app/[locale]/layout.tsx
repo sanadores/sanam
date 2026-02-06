@@ -37,8 +37,8 @@ export default function RootLayout({
   params: { locale: string };
 }>) {
   const messages = useMessages();
-  console.log("Messages:", messages);
-  console.log("Locale:", locale);
+  /*console.log("Messages:", messages);
+  console.log("Locale:", locale);*/
   return (
     <NextIntlClientProvider messages={messages}>
       <html lang={locale}>
